@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <section className="py-[2rem]">
+    <section>
       <div className="space-y-5 px-3">
         <h1 className="text-5xl font-bold">
           Discover what’s possible with 3D printing

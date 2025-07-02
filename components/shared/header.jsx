@@ -4,8 +4,8 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="h-[3.5rem] flex items-center justify-between px-3">
-      <Link href="#">
+    <header className="h-[3.5rem] flex items-center justify-between px-3 mb-[2rem]">
+      <Link href="/">
         <Image
           className="h-10 w-10 cursor-pointer"
           src={printLogo}
@@ -19,7 +19,7 @@ export default function Header() {
           <Link href="#">3d model</Link>
         </li>
         <li className="cursor-pointer">
-          <Link href="#">About</Link>
+          <Link href="/about">About</Link>
         </li>
       </ul>
     </header>
