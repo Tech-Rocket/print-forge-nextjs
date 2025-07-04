@@ -1,4 +1,4 @@
-import heroImg from "@/public/images/Frame4.png";
+import heroImg from "../public/images/Frame4.png";
 import Image from "next/image";
 
 export default function Home() {
@@ -16,7 +16,6 @@ export default function Home() {
           browse models
         </button>
       </div>
-
       <Image
         src={heroImg}
         alt="hero image"

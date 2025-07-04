@@ -1,5 +1,5 @@
 import Image from "next/image";
-import printLogo from "@/public/images/printforge-logomobile.png";
+import printLogo from "../../public/images/printforge-logomobile.png";
 import Link from "next/link";
 
 export default function Header() {
