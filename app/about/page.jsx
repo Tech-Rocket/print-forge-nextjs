@@ -1,8 +1,35 @@
 import aboutHeroImg from "../../public/images/about-hero-image.png";
 import Image from "next/image";
 import { Separator } from "../../components/ui/separator";
+import AboutCard from "./about-card";
+import { GoStack } from "react-icons/go";
+import { RiGlobalLine } from "react-icons/ri";
+import { CiFlag1 } from "react-icons/ci";
 
 export default function About() {
+  const aboutData = [
+    {
+      id: 1,
+      icon: <GoStack className="text-3xl" />,
+      title: "100K+ Models",
+      description:
+        "Access our vast library of community-created 3D models, from practical tools to artistic creations.",
+    },
+    {
+      id: 2,
+      icon: <RiGlobalLine className="text-3xl" />,
+      title: "Active Community",
+      description:
+        "Join thousands of makers who share tips, provide feedback, and collaborate on projects.",
+    },
+    {
+      id: 3,
+      icon: <CiFlag1 className="text-3xl" />,
+      title: "Free to Use",
+      description:
+        "Most models are free to download, with optional premium features for power users.",
+    },
+  ];
   return (
     <>
       <section className="px-4 space-y-5">
@@ -28,8 +55,17 @@ export default function About() {
           </p>
         </div>
       </section>
-      <Separator className="border border-gray-300 my-7" />
-      <div></div>
+      <Separator className="border border-gray-300 my-8" />
+      <section className="px-4 space-y-8 mb-8">
+        {aboutData.map((data) => (
+          <AboutCard
+            key={data.id}
+            title={data.title}
+            icon={data.icon}
+            description={data.description}
+          />
+        ))}
+      </section>
     </>
   );
 }
