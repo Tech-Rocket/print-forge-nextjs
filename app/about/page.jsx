@@ -5,6 +5,12 @@ import AboutCard from "./about-card";
 import { GoStack } from "react-icons/go";
 import { RiGlobalLine } from "react-icons/ri";
 import { CiFlag1 } from "react-icons/ci";
+import { Montserrat_Alternates } from "next/font/google";
+
+const montserratAlternates = Montserrat_Alternates({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
 
 export default function About() {
   const aboutData = [
@@ -41,7 +47,9 @@ export default function About() {
           className="w-full h-[20rem]"
         />
         <p className="font-medium uppercase tracking-wide">about printforge</p>
-        <h1 className="text-5xl font-bold">Empowering makers worldwide</h1>
+        <h1 className={`${montserratAlternates.className} text-5xl font-bold`}>
+          Empowering makers worldwide
+        </h1>
         <div className="text-xl font-medium text-gray-500 space-y-6">
           <p>
             Founded in 2023, PrintForge has quickly become the go-to platform

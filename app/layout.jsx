@@ -1,11 +1,10 @@
-import { Montserrat_Alternates } from "next/font/google";
+import { Albert_Sans } from "next/font/google";
 import Header from "../components/shared/header";
 import "./globals.css";
 
-const montserratAlternates = Montserrat_Alternates({
+const albertSan = Albert_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-  variable: "--font-montserrat-alternates",
+  display: "swap",
 });
 
 export const metadata = {
@@ -16,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${montserratAlternates.className} antialiased`}>
+      <body className={`${albertSan.className} antialiased`}>
         <Header />
         <main>{children}</main>
       </body>
