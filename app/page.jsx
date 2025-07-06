@@ -1,17 +1,11 @@
 import heroImg from "../public/images/Frame4.png";
 import Image from "next/image";
-import { Montserrat_Alternates } from "next/font/google";
-
-const montserratAlternates = Montserrat_Alternates({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-});
 
 export default function Home() {
   return (
     <section>
       <div className="space-y-5 px-3">
-        <h1 className={` ${montserratAlternates.className} text-5xl font-bold`}>
+        <h1 className="text-5xl font-bold">
           Discover what’s possible with 3D printing
         </h1>
         <p className="text-xl font-medium text-gray-500">
